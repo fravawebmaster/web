@@ -1,6 +1,13 @@
 {
-    "name": "fravawebmaster/fravawebmaster",
+    "name": "fravawebmaster/web",
     "description": "Website",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Frava Webmaster",
+            "email": "info@fravawebmaster.com"
+        }
+    ],
     "require": {
         "php": "^7.4"
     }
