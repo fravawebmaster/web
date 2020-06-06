@@ -1,0 +1,7 @@
+{
+    "name": "fravawebmaster/fravawebmaster",
+    "description": "Website",
+    "require": {
+        "php": "^7.4"
+    }
+}

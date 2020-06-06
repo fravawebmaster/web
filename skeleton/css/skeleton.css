@@ -1,0 +1,62 @@
+/* GENRALES */
+* { box-sizing: border-box; font-family: sans-serif; }
+
+html, body { height: 100%; margin: 0; padding: 0; }
+
+h1, h2 { text-transform: uppercase; margin: 2% auto; text-align: center; }
+
+img { width: 100%; }
+
+/* HEADER */
+header { display: grid; padding: 1%; grid-template-columns: 25% 50% 25%; grid-template-areas: "navegacion logo usuario"; justify-content: center; align-items: center; z-index: 10; font-size: 14px; /* LOGO */ /* USUARIO */ /* NAVEGACION */ }
+header #logo { grid-area: logo; margin: auto; }
+header #logo img { height: 30px; width: auto; }
+header #usuario { grid-area: usuario; margin: auto; }
+header #usuario div { display: inline-block; }
+header #usuario div div { width: 30px; height: 30px; }
+header #usuario div div .icono-buscar { background-image: url("../img/icono-buscar.svg"); }
+header #usuario div div .icono-usuario { background-image: url("../img/icono-usuario.svg"); }
+header #usuario div div .icono-carrito { background-image: url("../img/icono-carrito.svg"); }
+header #usuario div ul { display: none; position: absolute; width: 40%; height: 100%; background-color: white; right: 0; }
+header #usuario div ul li { display: block; }
+header #usuario div:hover ul { display: block; }
+header nav { grid-area: navegacion; margin: auto; }
+header nav .icono-menu { display: block; position: relative; width: 30px; height: 30px; background-image: url("../img/icono-menu.svg"); }
+header nav ul { display: none; position: absolute; width: 40%; height: 100%; margin: 0; padding: 0; left: 0; }
+header nav ul li { display: block; }
+header nav:hover ul { display: block; }
+
+@media only screen and (min-width: 600px) { /* HEADER */
+  header { grid-template-columns: 25% 50% 25%; grid-template-areas: "logo navegacion usuario"; /* LOGO */ /* USUARIO */ /* NAVEGACION */ }
+  header #logo img { height: 40px; }
+  header #usuario div ul { width: 20%; }
+  header nav .icono-menu { display: none; }
+  header nav ul { display: block; position: relative; width: 100%; top: 0; height: unset; }
+  header nav ul li { display: inline-block; margin: 5px; padding: 5px; } }
+/* FOOTER */
+footer { display: flex; flex-wrap: wrap; padding: 2%; justify-content: center; }
+footer #logo-footer { width: 70%; }
+footer div { width: 40%; margin: 1%; vertical-align: top; text-align: left; }
+footer div h2 { text-align: left; font-size: 14px; }
+footer div ul { padding-left: 15px; }
+footer div ul li { margin: 5px auto; font-size: 14px; }
+footer #redes-sociales div { display: inline-block; width: 35px; height: 35px; margin: 10px; opacity: 0.6; background-size: cover; background-repeat: no-repeat; opacity: 0.6; }
+footer #redes-sociales div:hover { opacity: 1; }
+footer #redes-sociales .btn-facebook { background-image: url("../img/icono-facebook.svg"); }
+footer #redes-sociales .btn-instagram { background-image: url("../img/icono-instagram.svg"); }
+footer #redes-sociales .btn-twitter { background-image: url("../img/icono-twitter.svg"); }
+
+@media only screen and (min-width: 600px) { footer div { width: 15%; } }
+/* MODULO SECCION */
+#pagina { text-align: center; }
+#pagina #pagina-descripcion { display: inline-block; width: 90%; font-size: 18px; }
+
+@media only screen and (min-width: 600px) { #pagina #pagina-descripcion { width: 60%; } }
+/* FORMULARIOS */
+input, textarea, select { margin: 10px auto; padding: 10px; font-size: 16px; text-align: left; cursor: pointer; }
+
+input[type=submit] { display: block; text-align: center; }
+
+select { width: unset; }
+
+/*# sourceMappingURL=skeleto.css.map */

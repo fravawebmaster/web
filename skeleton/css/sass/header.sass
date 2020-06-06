@@ -1,0 +1,94 @@
+/* HEADER */
+header
+	display: grid
+	padding: 1%
+	grid-template-columns: 25% 50% 25%
+	grid-template-areas: 'navegacion logo usuario'
+	justify-content: center
+	align-items: center
+	z-index: 10
+	font-size: 14px
+	/* LOGO */
+	#logo
+		grid-area: logo
+		margin: auto
+		img
+			height: 30px
+			width: auto
+	/* USUARIO */
+	#usuario
+		grid-area: usuario
+		margin: auto
+		div
+			display: inline-block
+			div
+				width: 30px
+				height: 30px
+				.icono-buscar
+					background-image: url('../img/icono-buscar.svg')
+				.icono-usuario
+					background-image: url('../img/icono-usuario.svg')
+				.icono-carrito
+					background-image: url('../img/icono-carrito.svg')
+			ul
+				display: none
+				position: absolute
+				width: 40%
+				height: 100%
+				background-color: white
+				right: 0
+				li
+					display: block
+			&:hover ul
+				display: block
+	/* NAVEGACION */
+	nav
+		grid-area: navegacion
+		margin: auto
+		.icono-menu
+			display: block
+			position: relative
+			width: 30px
+			height: 30px
+			background-image: url('../img/icono-menu.svg')
+		ul
+			display: none
+			position: absolute
+			width: 40%
+			height: 100%
+			margin: 0
+			padding: 0
+			left: 0
+			li
+				display: block
+		&:hover ul
+			display: block
+
+@media only screen and (min-width: 600px)
+	/* HEADER */
+	header
+		grid-template-columns: 25% 50% 25%
+		grid-template-areas: "logo navegacion usuario"
+		/* LOGO */
+		#logo
+			img
+				height: 40px
+		/* USUARIO */
+		#usuario
+			div
+				ul
+					width: 20%
+		/* NAVEGACION */
+		nav
+			.icono-menu
+				display: none
+			ul
+				display: block
+				position: relative
+				width: 100%
+				top: 0
+				height: unset
+				li
+					display: inline-block
+					margin: 5px
+					padding: 5px
